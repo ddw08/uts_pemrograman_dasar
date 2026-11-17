@@ -1,0 +1,86 @@
+[
+  {
+    "nim": "123",
+    "name": "bagus",
+    "program": "teknik",
+    "score": 78,
+    "attendance": 80
+  },
+  {
+    "nim": "231",
+    "name": "san",
+    "program": "informatika",
+    "score": 89,
+    "attendance": 90
+  },
+  {
+    "nim": "2301001",
+    "name": "Andi",
+    "program": "Teknik Komputer",
+    "score": 85,
+    "attendance": 92
+  },
+  {
+    "nim": "2301002",
+    "name": "Budi",
+    "program": "Informatika",
+    "score": 72,
+    "attendance": 81
+  },
+  {
+    "nim": "2301003",
+    "name": "Citra",
+    "program": "Teknik Komputer",
+    "score": 92,
+    "attendance": 95
+  },
+  {
+    "nim": "2301004",
+    "name": "Dewi",
+    "program": "Sistem Informasi",
+    "score": 88,
+    "attendance": 70
+  },
+  {
+    "nim": "2301005",
+    "name": "Eka",
+    "program": "Informatika",
+    "score": 0,
+    "attendance": 80
+  },
+  {
+    "nim": "2301006",
+    "name": "Fajar",
+    "program": "Sistem Informasi",
+    "score": 60,
+    "attendance": 75
+  },
+  {
+    "nim": "2301007",
+    "name": "Gita",
+    "program": "Teknik Komputer",
+    "score": 90,
+    "attendance": 90
+  },
+  {
+    "nim": "2301008",
+    "name": "Hana",
+    "program": "Informatika",
+    "score": 59,
+    "attendance": 89
+  },
+  {
+    "nim": "2301009",
+    "name": "Indra",
+    "program": "Sistem Informasi",
+    "score": 100,
+    "attendance": 74
+  },
+  {
+    "nim": "2301010",
+    "name": "Joko",
+    "program": "Teknik Komputer",
+    "score": 80,
+    "attendance": 75
+  }
+]

@@ -1,0 +1,2 @@
+# Aplikasi ini hanya memakai Python standard library (Python 3.10+).
+# Tidak ada dependency eksternal yang perlu dipasang dengan pip.

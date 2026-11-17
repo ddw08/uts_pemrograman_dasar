@@ -1,0 +1,42 @@
+$ python debugging/skenario_debug.py a
+Dewi: Lulus
+
+$ python debugging/skenario_debug.py b
+Traceback (most recent call last):
+  File "/home/claude/uts-student-analyzer/debugging/skenario_debug.py", line 64, in <module>
+    {"a": skenario_a, "b": skenario_b, "b2": skenario_b_diperbaiki}[pilihan]()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/claude/uts-student-analyzer/debugging/skenario_debug.py", line 51, in skenario_b
+    print(baca_nama_naif(RAIZ / "debugging" / "header_salah.csv"))
+          ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/claude/uts-student-analyzer/debugging/skenario_debug.py", line 46, in baca_nama_naif
+    return [row["name"] for row in csv.DictReader(file)]
+            ~~~^^^^^^^^
+KeyError: 'name'
+
+$ python debugging/skenario_debug.py b2
+Impor gagal: Kolom CSV tidak lengkap, kurang: name
+
+$ python -m pdb debugging/skenario_debug.py a   (perintah: b status_salah, c, p score, p attendance, n, n, p score >= 80, r, q)
+> /home/claude/uts-student-analyzer/debugging/skenario_debug.py(1)<module>()
+-> """Dua skenario debugging untuk Soal 6.
+(Pdb) Breakpoint 1 at /home/claude/uts-student-analyzer/debugging/skenario_debug.py:22
+(Pdb) > /home/claude/uts-student-analyzer/debugging/skenario_debug.py(24)status_salah()
+-> if score >= 90 and attendance >= 90:
+(Pdb) 88
+(Pdb) 70
+(Pdb) > /home/claude/uts-student-analyzer/debugging/skenario_debug.py(26)status_salah()
+-> if score >= 80:
+(Pdb) > /home/claude/uts-student-analyzer/debugging/skenario_debug.py(27)status_salah()
+-> return "Lulus"  # <- Dewi (88, hadir 70) berhenti di sini
+(Pdb) True
+(Pdb)   /usr/local/lib/python3.13/bdb.py(680)run()
+-> exec(cmd, globals, locals)
+  <string>(1)<module>()
+  /home/claude/uts-student-analyzer/debugging/skenario_debug.py(64)<module>()
+-> {"a": skenario_a, "b": skenario_b, "b2": skenario_b_diperbaiki}[pilihan]()
+  /home/claude/uts-student-analyzer/debugging/skenario_debug.py(38)skenario_a()
+-> status = status_salah(dewi["score"], dewi["attendance"])
+> /home/claude/uts-student-analyzer/debugging/skenario_debug.py(27)status_salah()
+-> return "Lulus"  # <- Dewi (88, hadir 70) berhenti di sini
+(Pdb) 
